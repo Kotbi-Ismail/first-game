@@ -20,17 +20,23 @@ body {
   overflow: hidden;
   flex-direction: column;
   justify-content: center;
-  border-radius: 5px;
-  background: #293447;
-  box-shadow: 0 20px 40px rgba(52, 87, 220, 0.2);
+  border-radius: 10px;
+  background: linear-gradient(145deg, #2a3b52, #192337);
+  box-shadow: 0 20px 40px rgba(52, 87, 220, 0.3);
+  transition: transform 0.3s ease;
+}
+.wrapper:hover {
+  transform: scale(1.02);
 }
 .game-details {
   color: #B8C6DC;
-  font-weight: 500;
+  font-weight: 600;
   font-size: 1.2rem;
   padding: 20px 27px;
   display: flex;
   justify-content: space-between;
+  background: #1f2738;
+  border-bottom: 1px solid #171B26;
 }
 .play-board {
   height: 100%;
@@ -38,14 +44,25 @@ body {
   display: grid;
   background: #212837;
   grid-template: repeat(30, 1fr) / repeat(30, 1fr);
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
 }
 .play-board .food {
   background: #FF003D;
+  border-radius: 50%;
+  transition: background 0.3s ease;
+}
+.play-board .food:hover {
+  background: #FF3355;
 }
 .play-board .head {
   background: #60CBFF;
+  border-radius: 5px;
+  transition: background 0.3s ease;
 }
-
+.play-board .head:hover {
+  background: #80D6FF;
+}
 .controls {
   display: none;
   justify-content: space-between;
@@ -58,6 +75,14 @@ body {
   width: calc(100% / 4);
   cursor: pointer;
   border-right: 1px solid #171B26;
+  transition: color 0.3s ease, background 0.3s ease;
+}
+.controls i:last-child {
+  border-right: none;
+}
+.controls i:hover {
+  color: #60CBFF;
+  background: #171B26;
 }
 
 @media screen and (max-width: 800px) {
