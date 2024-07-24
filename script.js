@@ -1,3 +1,4 @@
+//test1
 //Project Start
 const playBoard = document.querySelector(".play-board");
 const scoreElement = document.querySelector(".score");
